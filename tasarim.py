@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\template.ui'
+# Form implementation generated from reading ui file 'template.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -34,7 +34,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.verticalLayoutWidget_2)
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
-        self.dr_list = QtWidgets.QListWidget(self.verticalLayoutWidget_2)
+        self.dr_list = QtWidgets.QTreeWidget(self.verticalLayoutWidget_2)
         self.dr_list.setObjectName("dr_list")
         self.verticalLayout_2.addWidget(self.dr_list)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -42,15 +42,15 @@ class Ui_MainWindow(object):
         self.dr_ekle_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
         self.dr_ekle_button.setObjectName("dr_ekle_button")
         self.horizontalLayout.addWidget(self.dr_ekle_button)
-        self.sadece_sec_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
-        self.sadece_sec_button.setObjectName("sadece_sec_button")
-        self.horizontalLayout.addWidget(self.sadece_sec_button)
-        self.sec_ayarla_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
-        self.sec_ayarla_button.setObjectName("sec_ayarla_button")
-        self.horizontalLayout.addWidget(self.sec_ayarla_button)
         self.dr_sil_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
         self.dr_sil_button.setObjectName("dr_sil_button")
         self.horizontalLayout.addWidget(self.dr_sil_button)
+        self.dr_sadece_sec_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
+        self.dr_sadece_sec_button.setObjectName("dr_sadece_sec_button")
+        self.horizontalLayout.addWidget(self.dr_sadece_sec_button)
+        self.dr_sec_ayarla_button = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
+        self.dr_sec_ayarla_button.setObjectName("dr_sec_ayarla_button")
+        self.horizontalLayout.addWidget(self.dr_sec_ayarla_button)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.tabWidget.addTab(self.tab_1, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -65,7 +65,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.search_line_2)
         self.dr_tree = QtWidgets.QTreeWidget(self.tab_2)
         self.dr_tree.setObjectName("dr_tree")
-        self.dr_tree.headerItem().setText(0, "1")
+        self.dr_tree.headerItem().setText(0, "Doktorlar")
         self.verticalLayout.addWidget(self.dr_tree)
         self.gridLayout_3.addLayout(self.verticalLayout, 0, 0, 1, 1)
         self.karsilik = QtWidgets.QTextBrowser(self.tab_2)
@@ -100,13 +100,24 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Hoş Geldiniz Lütfen Bir Dr Adı Seçiniz..."))
+        self.dr_list.headerItem().setText(0, _translate("MainWindow", "Doktorlar"))
         self.dr_ekle_button.setText(_translate("MainWindow", "Dr Ekle"))
-        self.sadece_sec_button.setText(_translate("MainWindow", "Dr Sil"))
-        self.sec_ayarla_button.setText(_translate("MainWindow", "Sadece Seç"))
-        self.dr_sil_button.setText(_translate("MainWindow", "Seç ve Ayarla"))
+        self.dr_sil_button.setText(_translate("MainWindow", "Dr Sil"))
+        self.dr_sadece_sec_button.setText(_translate("MainWindow", "Sadece Seç"))
+        self.dr_sec_ayarla_button.setText(_translate("MainWindow", "Seç ve Ayarla"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "Giriş"))
         self.search_line_2.setPlaceholderText(_translate("MainWindow", "ara..."))
         self.ekle_button.setText(_translate("MainWindow", "EKLE"))
         self.duzelt_button.setText(_translate("MainWindow", "Düzelt"))
         self.sil_button.setText(_translate("MainWindow", "SİL"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Kısaltmalar"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

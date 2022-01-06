@@ -1,43 +1,71 @@
 import json
+from strings import dbfile
 
 class DB:
-    def __init__(self,dbfile,drdbfile):
+    def __init__(self,dbfile):
         self.dbfile = dbfile
-        self.drdbfile = drdbfile
 
-    def refresh_db(self):
-        with open(self.dbfile, encoding="UTF-8") as fd:
-            self.db = json.load(fd)
+    def get_db(self):
+        with open(self.dbfile, encoding="UTF-8") as f:
+            db = json.load(f)
+        return db
 
-        with open(self.drdbfile, encoding="UTF-8") as fdr:
-            self.drdb = json.load(fdr)
+    def get_drs_ids(self):
+        db = self.get_db()
+        return list(db.keys())
 
-        return self.db, self.drdb
+    def write_db(self,db):
+        with open(self.dbfile,"w", encoding="UTF-8") as f:
+            json.dump(db,f,indent = 4)
 
-    def add_db_hoca_alti(self,item,item1,val):
+    def get_kisaltma_from_id(self,id):
+        db = self.get_db()
+        return db[id]["kisaltmalar"]
 
-        self.refresh_db()
-        self.db[item][0][item1] = val
-        with open(self.dbfile,"w", encoding="UTF-8") as fe:
-            json.dump(self.db,fe,indent = 4)
+    def get_all_dr_isim(self):
+        dr_isim_list = []
+        db = self.get_db()
+        for i in db.keys():
+            dr_isim_list.append(db[i]["isim"])
+        return dr_isim_list
 
-        self.refresh_db()
+    def add_dr_db(self,data):
+        db = self.get_db()
+        id = len(self.get_all_dr_isim())+1
+        db[id] = data
+        self.write_db(db)
 
-    def del_db_hoca_alti(self,item,item1):
+    def add_kisaltma_db(self,id,data):
+        db = self.get_db()
+        db[id]["kisaltmalar"].update(data)
+        self.write_db(db)
 
-        self.refresh_db()
-        self.db[item][0].pop(item1)
-        with open(self.dbfile,"w", encoding="UTF-8") as fe:
-            json.dump(self.db,fe,indent = 4)
+    def fix_dr(self,id,data):
+        db = self.get_db()
+        db[id]["isim"] = data
+        self.write_db(db)
 
-        self.refresh_db()
+    def fix_kisaltma(self,id,data):
+        db = self.get_db()
+        db[id][kisaltmalar].update(data)
+        self.write_db(db)
 
-    def add_db_hoca(self,db,item):
+    def remove_dr_db(self,id):
+        db = self.get_db()
+        db.pop(id)
+        self.write_db(db)
 
-        self.refresh_db()
+    def remove_kisaltma_db(self,id,data):
+        db = self.get_db()
+        db[id]["kisaltmalar"].pop(data)
+        self.write_db(db)
 
-        self.db[item]= []
-        with open(db,"w", encoding="UTF-8") as fe:
-            json.dump(self.db,fe,indent = 4)
-
-        self.refresh_db()
+if __name__ == '__main__':
+    db = DB(dbfile)
+    data = {
+    "isim": "okan acar",
+    "kisaltmalar":{
+    "vay": "vay vay vay"
+    }
+    }
+    db.add_kisaltma_db("3",{"ekle":"ekledim ekledim"})

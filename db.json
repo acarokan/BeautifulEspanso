@@ -1,19 +1,31 @@
 {
-    "1": [
-        {
+    "1": {
+        "isim": "Ali \u015ealkac\u0131",
+        "kisaltmalar": {
             "aksesuar": "Dalak hilusu d\u00fczeyinde dalak ile izodens/izoekoik  aksesuar dalak ile uyumlu",
             "atelektazi": "Her iki akci\u011ferde da\u011f\u0131n\u0131k yerle\u015fimli bir ka\u00e7 adet fibroatelektatik bant formasyonu mevcuttur.",
-            "ali": "g\u00fcl",
+            "ali": "ali veli",
             "\u015fahide": "ahmet"
         }
-    ],
-    "2": [
-        {
+    },
+    "2": {
+        "isim": "Cemal Aydo\u011fan",
+        "kisaltmalar": {
             "dejenerasyon": "Kesitler dahilindeki kemik yap\u0131larda dejeneretif de\u011fi\u015fiklikler mevcuttur.",
             "kardiyomegali": "Kalp boyutlar\u0131 artm\u0131\u015ft\u0131r.(kardiyomegali)",
-            "ali": "veliiii",
-            "oyoy": "oyoyoy",
-            "ali": "ali veli"
+            "ate": "atelektazi"
         }
-    ]
+    },
+    "3": {
+        "isim": "okan acar",
+        "kisaltmalar": {
+            "ali": "veliiiii"
+        }
+    },
+    "4": {
+        "isim": "fatma acar",
+        "kisaltmalar": {
+            "ate": "atelektazi"
+        }
+    }
 }

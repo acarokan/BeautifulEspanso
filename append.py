@@ -17,20 +17,17 @@ lower_map = {
     ord(u'ç'): u'ç',
     ord(u'Ş'): u'ş',
     ord(u'ş'): u'ş',
-    ord(u'Ğ'): u'Ğ',
+    ord(u'Ğ'): u'ğ',
     ord(u'ğ'): u'ğ',
     }
 
 
 class Append(QDialog):
-    def __init__(self, list, file="default"):
+    def __init__(self,id):
         super().__init__()
-        self.file = file
-        self.list = list
-        self.hocaid = 0
-        self.dbobject = DB("db.json","drdb.json")
+        self.dr_id = id
+        self.dbobject = DB("db.json")
         self.createFormGroupBox()
-        self.define_files()
         buttonBox = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
         buttonBox.accepted.connect(self.accept)
         buttonBox.rejected.connect(self.reject)
@@ -39,6 +36,7 @@ class Append(QDialog):
         mainLayout.addWidget(buttonBox)
         self.setLayout(mainLayout)
         self.accepted.connect(self.kisayol_ekle)
+        self.exec_()
 
     def createFormGroupBox(self):
         self.formGroupBox = QGroupBox("Espanso ekle")
@@ -49,28 +47,14 @@ class Append(QDialog):
         layout.addRow(QLabel("karşılık:"), self.karsilik_line)
         self.formGroupBox.setLayout(layout)
 
-    def define_files(self):
-        if self.file == "default":
-            self.anadosya = anadosya
-            self.yedekdosya = yedekdosya
-        else:
-            self.anadosya = self.file
-            self.yedekdosya = "yedek.yml"
-
     def kisayol_ekle(self):
         self.kisayol = self.kisayol_line.text().strip().translate(lower_map).lower()
         self.karsilik = self.karsilik_line.text().strip()
-        self.dbobject.add_db_hoca_alti(self.hocaid,self.kisayol,self.karsilik)
+        data = {self.kisayol: self.karsilik}
+        self.dbobject.add_kisaltma_db(self.dr_id, data)
 
     def kisayol_sil(self, kisaltma):
         del self.list[kisaltma]
-        self.write_data()
-
-    def write_data(self):
-        with open(self.anadosya,"w", encoding="utf-8") as f:
-            f.write(giris)
-            for i in self.list.keys():
-                f.writelines(ekle.format(i,self.list[i]))
 
 
 """

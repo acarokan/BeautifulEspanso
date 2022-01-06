@@ -44,7 +44,13 @@
             </widget>
            </item>
            <item>
-            <widget class="QListWidget" name="dr_list"/>
+            <widget class="QTreeWidget" name="dr_list">
+             <column>
+              <property name="text">
+               <string>Doktorlar</string>
+              </property>
+             </column>
+            </widget>
            </item>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout">
@@ -56,21 +62,21 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="sadece_sec_button">
+              <widget class="QPushButton" name="dr_sil_button">
                <property name="text">
                 <string>Dr Sil</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="sec_ayarla_button">
+              <widget class="QPushButton" name="dr_sadece_sec_button">
                <property name="text">
                 <string>Sadece Seç</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="dr_sil_button">
+              <widget class="QPushButton" name="dr_sec_ayarla_button">
                <property name="text">
                 <string>Seç ve Ayarla</string>
                </property>
@@ -105,7 +111,7 @@
              <widget class="QTreeWidget" name="dr_tree">
               <column>
                <property name="text">
-                <string notr="true">1</string>
+                <string notr="true">Doktorlar</string>
                </property>
               </column>
              </widget>
