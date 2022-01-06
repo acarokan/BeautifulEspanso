@@ -1,31 +1,41 @@
 {
+    "0": {
+        "isim": "Genel",
+        "kisaltmalar": {
+            "v\u0131c\u0131k": "v\u0131c\u0131k v\u0131c\u0131k"
+        }
+    },
     "1": {
-        "isim": "Ali \u015ealkac\u0131",
+        "isim": "abd\u00fclkerim",
         "kisaltmalar": {
-            "aksesuar": "Dalak hilusu d\u00fczeyinde dalak ile izodens/izoekoik  aksesuar dalak ile uyumlu",
+            "aksesuar": "Dalak hilusu d\u00fczeyinde dalak ile izodens/izoekoik  aksesuar dalak ile uyumlu olabilecek ....mm boyutunda nod\u00fcler g\u00f6r\u00fcn\u00fcm mevcuttur.",
             "atelektazi": "Her iki akci\u011ferde da\u011f\u0131n\u0131k yerle\u015fimli bir ka\u00e7 adet fibroatelektatik bant formasyonu mevcuttur.",
-            "ali": "ali veli",
-            "\u015fahide": "ahmet"
-        }
-    },
-    "2": {
-        "isim": "Cemal Aydo\u011fan",
-        "kisaltmalar": {
-            "dejenerasyon": "Kesitler dahilindeki kemik yap\u0131larda dejeneretif de\u011fi\u015fiklikler mevcuttur.",
-            "kardiyomegali": "Kalp boyutlar\u0131 artm\u0131\u015ft\u0131r.(kardiyomegali)",
-            "ate": "atelektazi"
-        }
-    },
-    "4": {
-        "isim": "fatma acar",
-        "kisaltmalar": {
-            "ate": "atelektazi"
-        }
-    },
-    "5": {
-        "isim": "ahmet mehmet",
-        "kisaltmalar": {
-            "dejma": "dejmay\u0131n u\u015faklar"
+            "sonu\u00e7": "Pn\u00f6moniyi d\u00fc\u015f\u00fcnd\u00fcrecek BT bulgusu yoktur. NOT: Covid 19 pn\u00f6monisinin erken a\u015famas\u0131nda BT negatif olabilmektedir.",
+            "ax": "Abdominal aorta ve ana vask\u00fcler yap\u0131larda kalsifik aterom plaklar\u0131 izlenmi\u015ftir.",
+            "dependan": "Her iki akci\u011fer posterior kesimlerde dependan de\u011fi\u015fiklikler ile uyumlu dansite art\u0131\u015flar\u0131 mevcuttur.",
+            "dj": "G\u00f6r\u00fcnt\u00fcleme dahilindeki kemik yap\u0131larda osteodejeneratif de\u011fi\u015fiklikler izlendi.",
+            "do": "\u2026\u2026\u2026 vertebralarda belirgin osteodejeneratif de\u011fi\u015fiklikler ve vertebra korpus k\u00f6\u015felerinde osteofitik sivrile\u015fmeler izlenmi\u015ftir.",
+            "frakt\u00fcryok": "G\u00f6r\u00fcnt\u00fcleme dahilindeki kemik yap\u0131larda belirgin frakt\u00fcr hatt\u0131 izlenmedi.",
+            "hareket": "Hareket artefaktlar\u0131 nedeniyle de\u011ferlendirme suboptimaldir.",
+            "klinik": "Hastan\u0131n klinik ve laboratuvar bulgular\u0131yla birlikte de\u011ferlendirilmesi \u00f6nerilir.",
+            "kont\u00fczyo": "Her iki akci\u011ferde belirgin hemotoraks, pn\u00f6motoraks ve kont\u00fczyo izlenmedi.",
+            "korkal": "Arkus aorta ve koroner arterlerde kalsifik aterom plaklar\u0131 izlenmi\u015ftir.",
+            "kt": "Kardiotorasik oran kalp lehine artm\u0131\u015ft\u0131r.",
+            "mb": "Mesane distand\u00fc de\u011fildir.",
+            "nefes": "Nefes artefaktlar\u0131 nedeniyle de\u011ferlendirme suboptimaldir.",
+            "nod\u00fcl": "Her iki akci\u011ferde da\u011f\u0131n\u0131k yerle\u015fimli milimetrik boyutlu birka\u00e7 adet pulmoner nod\u00fcl izlendi",
+            "perikard": "En kal\u0131n yerinde \u2026.. mm\u2019ye ula\u015fan perikardiyal mai izlendi.",
+            "emboli": "Tetkik faz\u0131 emboli a\u00e7\u0131s\u0131ndan optimal olmamakla birlikte de\u011ferlendirilebildi\u011fi kadar\u0131yla ana pulmoner arter , sa\u011f ve sol pulmoner arter ile izlenebilen dallar\u0131nda emboli ile uyumlu dolum defekti izlenmedi.",
+            "sk": "Safra kesesi  kontrakte g\u00f6r\u00fcn\u00fcmdedir.",
+            "sternotomi": "Hastada ge\u00e7irilmi\u015f sternotomiye sekonder sternumda cerrahi metalik s\u00fctur materyalleri izlenmi\u015ftir.",
+            "stabilizat\u00f6r": "\u2026\u2026\u2026.. d\u00fczeyinde vertebralara posteriordan uygulanm\u0131\u015f cerrahi stabilizat\u00f6rler izlenmekte olup bu d\u00fczeylerde yer yer posterior kemik elemanlar defektif g\u00f6r\u00fcn\u00fcmdedir.",
+            "azgos": "Hastada aksesuar azigos lob ve fiss\u00fcr\u00fcne ait g\u00f6r\u00fcn\u00fcm izlenmektedir.",
+            "hiatal": "Mide bir b\u00f6l\u00fcm\u00fc intratorasik konumludur ( hiatal herni?)",
+            "sliding": "Gastro\u00f6zefagial bile\u015fke intratorasik konumludur ( sliding herni? )",
+            "mlap": "Mediastende k\u0131sa aks\u0131 1 cm nin alt\u0131nda multpl LAP-LN lar\u0131 izlenmektedir.",
+            "pil": "G\u00f6\u011f\u00fcs \u2026\u2026.. \u00f6n duvarda kalp piline ait dansite mevcuttur.",
+            "steatoz": "Karaci\u011ferde steatoza sekonder dansite azal\u0131m\u0131 mevcuttur.",
+            "e.f.f.": "Her iki hemitoraks posteriorda sa\u011fda \u2026. Solda \u2026. Mm ye varan ef\u00fczyon ve ef\u00fczyon kom\u015fuluklar\u0131nda pasif atelektatik akci\u011fer segmentleri izlendi."
         }
     }
 }

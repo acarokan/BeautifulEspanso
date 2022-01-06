@@ -29,9 +29,18 @@ class DB:
             dr_isim_list.append(db[i]["isim"])
         return dr_isim_list
 
+    def get_all_kisaltmalar(self):
+        all_kisaltmalar = {}
+        db = self.get_db()
+        for i in db.keys():
+            all_kisaltmalar.update(db[i]["kisaltmalar"])
+        return all_kisaltmalar
+        
     def add_dr_db(self,data):
         db = self.get_db()
-        id = len(self.get_all_dr_isim())+1
+        id = self.get_drs_ids()
+        id = int(id[-1])+1
+        id = str(id)
         db[id] = data
         self.write_db(db)
 

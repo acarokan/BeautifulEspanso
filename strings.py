@@ -33,6 +33,21 @@ matches:
 
 #bizimkiler"""
 
+lower_map = {
+    ord(u'I'): u'ı',
+    ord(u'İ'): u'i',
+    ord(u'Ö'): u'ö',
+    ord(u'ö'): u'ö',
+    ord(u'Ü'): u'ü',
+    ord(u'ü'): u'ü',
+    ord(u'Ç'): u'ç',
+    ord(u'ç'): u'ç',
+    ord(u'Ş'): u'ş',
+    ord(u'ş'): u'ş',
+    ord(u'Ğ'): u'ğ',
+    ord(u'ğ'): u'ğ',
+    }
+
 ekle ='\n\n  - trigger: ":{}"\n    replace: \"{}"'
 biz = "#bizimkiler"
 trg = "  - trigger: "
@@ -53,5 +68,5 @@ dbfile = "db.json"
 drdbfile = "drdb.json"
 path = os.path.join(os.environ['HOMEPATH'],"AppData","Roaming","espanso")
 path_yedek = os.path.join(os.environ['USERPROFILE'],"OneDrive","Masaüstü")
-anadosya = os.path.join(path, "default.yml")
+espanso_file = os.path.join(path, "default.yml")
 yedekdosya = os.path.join(path_yedek, "default_yedek.yml")

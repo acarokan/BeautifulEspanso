@@ -1,0 +1,32 @@
+Aksesuar|    Dalak hilusu düzeyinde dalak ile izodens/izoekoik  aksesuar dalak ile uyumlu olabilecek ....mm boyutunda nodüler görünüm mevcuttur.
+Atelektazi|     Her iki akciğerde dağınık yerleşimli bir kaç adet fibroatelektatik bant formasyonu mevcuttur.
+SONUÇ| RSNA'ya göre covid 19 pnomonisi açısından atipik bulgular NOT: Bulgular covid 19 pnomonisi için atipik veya çok nadir bildirilmiştir. Başka tanılar düşünülmelidir.
+ax| Abdominal aorta ve ana vasküler yapılarda kalsifik aterom plakları izlenmiştir.
+SONUÇ| RSNA'ya göre covid 19 pnomonisi açısından belirsiz bulgular NOT: Bulgular Covid 19 pnomonisinde görülebilir ancak nonspesifiktir ve bir dizi enfeksiyonda ve enfeksiyon dışı hastalıkta bulunabilir.
+SONUÇ| RSNA'ya göre tipik covid 19 bulguları NOT: Covid 19 pnömonisi için sık bildirilen bulgular mevcuttur. İnfluenza pnömonisi ve organize pnömoni (ilaç toksititesi veya bağ dokusu hastalığına bağlı ) benzer bulgular verebilir.
+SONUÇ| Pnömoniyi düşündürecek BT bulgusu yoktur. NOT: Covid 19 pnömonisinin erken aşamasında BT negatif olabilmektedir.
+Dependan|Her iki akciğer posterior kesimlerde dependan değişiklikler ile uyumlu dansite artışları mevcuttur.
+Dj| Görüntüleme dahilindeki kemik yapılarda osteodejeneratif değişiklikler izlendi.
+Do|    ……… vertebralarda belirgin osteodejeneratif değişiklikler ve vertebra korpus köşelerinde osteofitik sivrileşmeler izlenmiştir.
+Fraktüryok|  Görüntüleme dahilindeki kemik yapılarda belirgin fraktür hattı izlenmedi.
+Hareket|      Hareket artefaktları nedeniyle değerlendirme suboptimaldir.
+Klinik|    Hastanın klinik ve laboratuvar bulgularıyla birlikte değerlendirilmesi önerilir.
+Kontüzyo|      Her iki akciğerde belirgin hemotoraks, pnömotoraks ve kontüzyo izlenmedi.
+Korkal|         Arkus aorta ve koroner arterlerde kalsifik aterom plakları izlenmiştir.
+Kt|       Kardiotorasik oran kalp lehine artmıştır.
+Mb|      Mesane distandü değildir.
+Nefes |    Nefes artefaktları nedeniyle değerlendirme suboptimaldir.
+Nodül|      Her iki akciğerde dağınık yerleşimli milimetrik boyutlu birkaç adet pulmoner nodül izlendi
+Perikard|      En kalın yerinde ….. mm’ye ulaşan perikardiyal mai izlendi.
+Emboli|   Tetkik fazı emboli açısından optimal olmamakla birlikte değerlendirilebildiği kadarıyla ana pulmoner arter , sağ ve sol pulmoner arter ile izlenebilen dallarında emboli ile uyumlu dolum defekti izlenmedi.
+Sk|      Safra kesesi  kontrakte görünümdedir.
+So|      Safra kesesi izlenmedi (opere?).
+Sternotomi|    Hastada geçirilmiş sternotomiye sekonder sternumda cerrahi metalik sütur materyalleri izlenmiştir.
+Stabilizatör|    ……….. düzeyinde vertebralara posteriordan uygulanmış cerrahi stabilizatörler izlenmekte olup bu düzeylerde yer yer posterior kemik elemanlar defektif görünümdedir.
+Azgos|     Hastada aksesuar azigos lob ve fissürüne ait görünüm izlenmektedir.
+Hiatal|   Mide bir bölümü intratorasik konumludur ( hiatal herni?)
+Sliding|   Gastroözefagial bileşke intratorasik konumludur ( sliding herni? )
+Mlap|     Mediastende kısa aksı 1 cm nin altında multpl LAP-LN ları izlenmektedir.
+Pil|   Göğüs …….. ön duvarda kalp piline ait dansite mevcuttur.
+Steatoz|  Karaciğerde steatoza sekonder dansite azalımı mevcuttur.
+e.f.f.|  Her iki hemitoraks posteriorda sağda …. Solda …. Mm ye varan efüzyon ve efüzyon komşuluklarında pasif atelektatik akciğer segmentleri izlendi.

@@ -25,9 +25,11 @@ class Main(QMainWindow):
         self.add_list_dr_tree_item()
         self.ui.dr_ekle_button.clicked.connect(self.dr_ekle)
         self.ui.dr_sadece_sec_button.clicked.connect(self.dr_sadece_sec)
+        self.ui.dr_sec_ayarla_button.clicked.connect(self.dr_sec_ayarla)
         self.ui.dr_sil_button.clicked.connect(self.dr_sil)
         self.ui.dr_tree.itemClicked.connect(self.activeItem)
         self.ui.ekle_button.clicked.connect(self.kisaltma_ekle)
+        self.ui.duzelt_button.clicked.connect(self.kisaltma_duzelt)
         self.ui.sil_button.clicked.connect(self.kisaltma_sil)
         self.ui.search_line_2.textEdited.connect(self.search_kisaltma)
 
@@ -55,6 +57,34 @@ class Main(QMainWindow):
             tw = Dr(i,self.db[i]["isim"],self.db[i]["kisaltmalar"])
             self.ui.dr_list.addTopLevelItem(tw)
 
+    def dr_sadece_sec(self):
+        dr = self.ui.dr_list.currentItem()
+        if dr:
+            item = self.ui.dr_list.currentItem()
+            for i in self.ui.dr_tree.findItems("",QtCore.Qt.MatchContains):
+                if i.get_id() == item.get_id():
+                    i.setHidden(False)
+                else:
+                    i.setHidden(True)
+        else:
+            err = ErrorMessage(QMessageBox.Warning,"Lütfen bir doktor seçiniz.",error_message_baslik_dikkat)
+
+    def dr_sec_ayarla(self):
+        dr = self.ui.dr_list.currentItem()
+        if dr:
+            content = ""
+            dr = self.ui.dr_list.currentItem()
+            kisaltmalar = dr.get_kisaltmalar()
+            genel_kisaltmalar = self.dbobject.get_kisaltma_from_id("0")
+            for i in genel_kisaltmalar.keys():
+                content += ekle.format(i,genel_kisaltmalar[i])
+            for i in kisaltmalar.keys():
+                content += ekle.format(i,kisaltmalar[i])
+            with open(espanso_file,"w", encoding="utf-8") as f:
+                f.write(giris + content)
+        else:
+            err = ErrorMessage(QMessageBox.Warning,"Lütfen bir doktor seçiniz.",error_message_baslik_dikkat)
+
     def dr_ekle(self):
         drapp = DrAppend(id)
         drapp.exec_()
@@ -77,12 +107,27 @@ class Main(QMainWindow):
         dr = self.ui.dr_tree.currentItem()
         if isinstance(dr, Dr):
             self.append = Append(dr.get_id())
+            self.append.exec_()
             self.update()
         else:
             err = ErrorMessage(QMessageBox.Warning,err_wrong_id,error_message_baslik_dikkat)
 
-    def kisaltma_sil(self):
+    def kisaltma_duzelt(self):
+        item = self.ui.dr_tree.currentItem()
+        if isinstance(item, Dr):
+            err = ErrorMessage(QMessageBox.Warning,err_wrong_id_kisaltma,error_message_baslik_dikkat)
+        else:
+            drid = item.parent().get_id()
+            karsiliklar = item.parent().get_kisaltmalar()
+            self.append = Append(drid)
+            self.append.set_duzeltme_mi(True)
+            self.append.set_duzeltme_text(item.text(0))
+            self.append.kisayol_line.setText(item.text(0))
+            self.append.karsilik_line.setText(karsiliklar[item.text(0)])
+            self.append.exec_()
+            self.update()
 
+    def kisaltma_sil(self):
         item = self.ui.dr_tree.currentItem()
         if isinstance(item, Dr):
             err = ErrorMessage(QMessageBox.Warning,err_wrong_id_kisaltma,error_message_baslik_dikkat)
@@ -95,14 +140,6 @@ class Main(QMainWindow):
                 self.update()
             else:
                 pass
-
-    def dr_sadece_sec(self):
-        item = self.ui.dr_list.currentItem()
-        for i in self.ui.dr_tree.findItems("",QtCore.Qt.MatchContains):
-            if i.get_id() == item.get_id():
-                i.setHidden(False)
-            else:
-                i.setHidden(True)
 
     def activeItem(self,item):
 
