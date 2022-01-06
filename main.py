@@ -24,6 +24,7 @@ class Main(QMainWindow):
         self.add_list_dr_list_item()
         self.add_list_dr_tree_item()
         self.ui.dr_ekle_button.clicked.connect(self.dr_ekle)
+        self.ui.dr_sadece_sec_button.clicked.connect(self.dr_sadece_sec)
         self.ui.dr_sil_button.clicked.connect(self.dr_sil)
         self.ui.dr_tree.itemClicked.connect(self.activeItem)
         self.ui.ekle_button.clicked.connect(self.kisaltma_ekle)
@@ -95,12 +96,20 @@ class Main(QMainWindow):
             else:
                 pass
 
+    def dr_sadece_sec(self):
+        item = self.ui.dr_list.currentItem()
+        for i in self.ui.dr_tree.findItems("",QtCore.Qt.MatchContains):
+            if i.get_id() == item.get_id():
+                i.setHidden(False)
+            else:
+                i.setHidden(True)
+
     def activeItem(self,item):
 
         self.selected_item = item
         if isinstance(self.selected_item, Dr):
             self.selected_dr = item
-            drid = str(self.ui.dr_tree.indexOfTopLevelItem(item)+1)
+            drid = item.get_id()
             self.ui.karsilik.setText(self.db[drid]["isim"])
         else:
             self.selected_dr = item.parent()
@@ -110,15 +119,18 @@ class Main(QMainWindow):
 
     def search_kisaltma(self, arama):
         for i in self.ui.dr_tree.findItems("",QtCore.Qt.MatchContains):
-
-            child_count = i.childCount()
+            kisaltmalar = i.get_kisaltmalar_ids()
+            child_count = len(kisaltmalar)
+            if child_count == 0:
+                continue
+            else:
+                i.setHidden(True)
             for j in range(0,child_count):
-                if i.child(j).text(0).find(arama) == -1:
-                    i.setHidden(True)
+                if kisaltmalar[j].find(arama) == -1:
                     i.child(j).setHidden(True)
                 else:
-                    i.setHidden(False)
                     i.child(j).setHidden(False)
+                    i.setHidden(False)
 
 
 

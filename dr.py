@@ -20,12 +20,13 @@ class Dr(QTreeWidgetItem):
     def get_kisaltmalar(self):
         return self.kisaltmalar
 
-    def kisaltma_ekle(self,data):
+    def get_kisaltmalar_ids(self):
+        return list(self.kisaltmalar.keys())
 
+    def kisaltma_ekle(self,data):
         self.kisaltmalar.update(data)
         self.db.add_kisaltma_db(self.id, data)
 
     def kisaltma_sil(self,kisaltma):
-
         self.kisaltmalar.pop(kisaltma)
         self.db.remove_kisaltma_db(self.id,data)

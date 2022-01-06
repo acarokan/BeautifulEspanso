@@ -2,7 +2,7 @@ import sys
 import os
 from shutil import copy
 from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QLabel, QLineEdit, QVBoxLayout, QGroupBox, QDialogButtonBox, QVBoxLayout, QDialog, QApplication
+from PyQt5.QtWidgets import QLabel, QLineEdit, QVBoxLayout, QGroupBox, QDialogButtonBox, QVBoxLayout, QDialog, QApplication, QFileDialog
 from db import DB
 from strings import *
 
@@ -43,7 +43,8 @@ class Append(QDialog):
         layout = QtWidgets.QFormLayout()
         self.kisayol_line = QLineEdit()
         self.karsilik_line = QLineEdit()
-        layout.addRow(QLabel("Kısaltma:"), self.kisayol_line)
+        self.file_browser = QFileDialog()
+        layout.addRow(QLabel("Kısaltma:"), self.kisayol_line, self.kisayol_line)
         layout.addRow(QLabel("karşılık:"), self.karsilik_line)
         self.formGroupBox.setLayout(layout)
 
